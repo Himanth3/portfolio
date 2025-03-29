@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm a passionate developer creating amazing web experiences</p>
+            <a href="#contact" class="cta-button">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I'm a dedicated web developer with a passion for creating beautiful and functional websites. I love turning ideas into reality through code.</p>
+                <p>With several years of experience in web development, I specialize in creating responsive and user-friendly applications.</p>
+                <div class="resume-actions">
+                    <a href="../portfolio/resume.pdf" class="download-btn" download>
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                    <button class="preview-btn" onclick="toggleResumePreview()">
+                        <i class="fas fa-eye"></i>
+                        Preview Resume
+                    </button>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="imgs/me.jpeg" alt="Profile Picture">
+            </div>
+        </div>
+        
+        <!-- Resume Preview Modal -->
+        <div id="resumePreview" class="resume-preview-modal">
+            <div class="resume-preview-content">
+                <div class="preview-header">
+                    <h3>Resume Preview</h3>
+                    <button class="close-preview" onclick="toggleResumePreview()">
+                        <i class="fas fa-times"></i>
+                        Close Preview
+                    </button>
+                </div>
+                <iframe src="resume.pdf" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <p>Advanced</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <p>Advanced</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-bootstrap"></i>
+                <h3>Bootstrap</h3>
+                <p>Advanced</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>SQL</h3>
+                <p>Intermediate</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="imgs/secret.png" alt="Project 1">
+                <h3>Secret Message Encoder Decoder</h3>
+                <p>"Secret" is a web-based interactive platform designed to explore hidden messages and encrypted content. Discover and decode secrets with a sleek, user-friendly interface.</p>
+                <div class="project-links">
+                    <a href="https://himanth3.github.io/Secret/" class="project-link">Live Demo</a>
+                    <a href="https://github.com/Himanth3/Secret" class="project-link">GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="imgs/quiz.png" alt="Project 2">
+                <h3>Quiz Game</h3>
+                <p>"Quiz Game" is a fun and interactive web-based game that challenges your knowledge with engaging questions. Test your skills and compete for high scores!.</p>
+                <div class="project-links">
+                    <a href="https://himanth3.github.io/quiz/" class="project-link">Live Demo</a>
+                    <a href="https://github.com/Himanth3/quiz" class="project-link">GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="imgs/port.png" alt="Project 3">
+                <h3>Rock Paper Scissors</h3>
+                <p>"Rock Paper Scissors" is a simple and fun game that challenges your decision-making skills. Play against the computer and see who comes out on top!</p>
+                <div class="project-links">
+                    <a href="https://himanth3.github.io/rps/" class="project-link">Live Demo</a>
+                    <a href="https://github.com/Himanth3/rps" class="project-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+        <h2>My Certifications</h2>
+        <div class="certifications-grid">
+            <div class="certification-card">
+                <img src="imgs/saleforce.png" alt="Certification 1">
+                <h3>Saleforce</h3>
+                <p>Complete salesforce developer </p>
+                <div class="certification-details">
+                    <span class="issuer">salesforce</span>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            <div class="certification-card">
+                <img src="imgs/power BI.png" alt="Certification 2">
+                <h3>Power BI</h3>
+                <p>Power BI for Beginners</p>
+                <div class="certification-details">
+                    <span class="issuer">PWS</span>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            <div class="certification-card">
+                <img src="imgs/edu skill.png" alt="Certification 3">
+                <h3>Edu Skill</h3>
+                <p>Microchip and Embedded System</p>
+                <div class="certification-details">
+                    <span class="issuer">APCSHE</span>
+                    <span class="date">2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>himanthbammidi@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 7989688049</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p></p>Mangalagiri, Andhra Pradesh, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/himanth-bammidi-58796928b/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Himanth3"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/HimanthBammidi"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2025 Himanth_3. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
